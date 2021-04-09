@@ -1,0 +1,26 @@
+body{
+    background: url("https://wallpapercave.com/wp/wp4013881.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#startSection{
+    text-align: center;
+    background-color: white;
+    border: red 5px solid;
+    padding: 25px;
+    border-radius: 10px;
+    width: 800px;
+    margin: 80px 100% auto 60px;
+    background-position: center;
+    background-attachment: fixed;
+    background-attachment: fixed;
+
+}
+
+h3{
+    border-bottom: 2px yellow solid;
+}
