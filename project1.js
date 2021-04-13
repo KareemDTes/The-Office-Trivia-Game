@@ -153,15 +153,15 @@ function displayResults() {
     console.log(score)
 
     if(score <= 15){
-        let scoreResult = "Did you even watch The Office?";
-    } else if (score = 20 || score <= 30){
-        scoreResult = "We think you need to watch the series another 4 times"
-    } else if (score = 35 || score <= 45){
+        scoreResult = "Did you even watch The Office?"
+    } else if (score >= 20 && score <= 30){
+        scoreResult = "We think you may need to watch the series another few times.."
+    } else if (score >= 35 && score <= 45){
         scoreResult = "You're on your way to being a true Office fan!"
-    } else if (score = 50 || score <= 60){
-        scoreResult = "We can tell you've watched the series 5-10 times"
+    } else if (score >= 50 && score <= 60){
+        scoreResult = "We can tell you've re-watched the series many times!"
     } else {
-        scoreResult = "You're an Office champion!!"
+        scoreResult = "Wow, you're an Office pro!!"
     }
     secondH2.innerText = `${scoreResult}`
 }
