@@ -93,6 +93,7 @@ const questions = [
 //function to set questions
 //global varable
 let q = 0;
+let currentQuestionAnswered = false
 
 function setQuestion() {
   questionContainer.innerText = questions[q].question;
@@ -101,20 +102,35 @@ function setQuestion() {
   answerButton3.innerText = questions[q].options[2];
   answerButton4.innerText = questions[q].options[3];
 
-  q++;
+  currentQuestionAnswered = false
+
+  answerButton1.style.background="white"
+  answerButton2.style.background="white"
+  answerButton3.style.background="white"
+  answerButton4.style.background="white"
+
+  if(q === 15){
+
+  }
 }
 
+let score = 0
+updateScore.innerHTML = `Score: ${score}`
+
 function validate(e) {
-
-    if(questions[q].options[q].answer == e.target.class){
-
-        console.log(e.target.class);
-        console.log("working");
-    } else{
-        console.log("Not working");
+    if(!currentQuestionAnswered){
+        if(e.target.innerText === questions[q].answer){
+            score = score + 5
+            updateScore.innerHTML = `Score: ${score}`
+            e.target.style.background="#00FF00";
+        } else{
+            e.target.style.background="#FF4D50";
+        }
     }
-    
-   setQuestion()
+
+    if(!currentQuestionAnswered) q++;
+    currentQuestionAnswered = true
+//    setQuestion()
 }
 
 

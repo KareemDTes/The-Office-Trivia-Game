@@ -13,7 +13,7 @@ body{
     border: #C2885D 5px solid;
     padding: 25px;
     border-radius: 10px;
-    width: 800px;
+    width: 55%;
     margin: 80px 100% auto 60px;
     background-attachment: fixed;
 }
@@ -33,7 +33,7 @@ p{
 }
 
 #introText{
-    width: 550px;
+    width: inherit;
     margin: 0 auto;
 }
 
