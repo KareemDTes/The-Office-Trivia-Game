@@ -1,7 +1,10 @@
-// Assign variables to html elements
-let startButton = document.getElementById("startButton");
+// Assign variables to html elements & questions array
 let questionContainer = document.getElementById("questionContainer");
 let nextQuestionButton = document.getElementById("nextQuestionButton");
+let updateScore = document.getElementById("score");
+
+let groupButtons = document.querySelectorAll(".optionButtons");
+
 let answerButton1 = document.querySelector("#answerButton1");
 let answerButton2 = document.querySelector("#answerButton2");
 let answerButton3 = document.querySelector("#answerButton3");
@@ -49,7 +52,7 @@ const questions = [
         answer: "$3,500"
     },
     {
-        question: "Fill in the bank: 'Fool me once, strike one. But fool me twice .. strinke ___.'",
+        question: "Fill in the bank: 'Fool me once, strike one. But fool me twice .. strike ___.'",
         options: ["One", "Two", "Three", "Four"],
         answer: "Three"
     },
@@ -75,8 +78,8 @@ const questions = [
     },
     {
         question: "When Phyllis suggests that Michael go out with her friend, Sandy, who's a professional softball player, what's one of the questions he asks about her?",
-        options: ["Is she beautiful?", "Could we share a rowboat?", "What's her shoe size", "How tall is she?"],
-        answer: "Real Pine"
+        options: ["Is she beautiful?", "Could we share a rowboat?", "What's her shoe size?", "How tall is she?"],
+        answer: "Could we share a rowboat?"
     },
     {
         question: "Who has two thumbs and hates Todd Packer?",
@@ -88,11 +91,10 @@ const questions = [
 // All the functions
 
 //function to set questions
-//global varables
+//global varable
 let q = 0;
 
 function setQuestion() {
-
   questionContainer.innerText = questions[q].question;
   answerButton1.innerText = questions[q].options[0];
   answerButton2.innerText = questions[q].options[1];
@@ -100,10 +102,28 @@ function setQuestion() {
   answerButton4.innerText = questions[q].options[3];
 
   q++;
-};
+}
+
+function validate(e) {
+
+    if(questions[q].options[q].answer == e.target.class){
+
+        console.log(e.target.class);
+        console.log("working");
+    } else{
+        console.log("Not working");
+    }
+    
+   setQuestion()
+}
 
 
 // Create event listeners
-// startButton.addEventListener("click", beginButton)
 window.addEventListener("load", setQuestion)
 nextQuestionButton.addEventListener("click", setQuestion)
+
+// Looping through groupButtons array, adding event listener & calling validate function for each index.
+groupButtons.forEach(button => {
+    button.addEventListener("click", validate)
+
+})

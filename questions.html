@@ -6,21 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Office Trivia Game</title>
     <link href="questionsStyle.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 </head>
 <body>
+    <h2 id="score">Score: 15</h2>
 
     <div id="questionsBox">
         <h1 id="questionContainer"></h1>
 
         <div id="answerButtons">
-            <button id ="answerButton1"></button>
-            <button id ="answerButton2"></button>
-            <button id ="answerButton3"></button>
-            <button id ="answerButton4"></button>
+            <button class ="optionButtons" id ="answerButton1"></button>
+            <button class ="optionButtons" id ="answerButton2"></button>
+            <button class ="optionButtons" id ="answerButton3"></button>
+            <button class ="optionButtons" id ="answerButton4"></button>
         </div>
-
-        <button id="nextQuestionButton">Next Question</button>
     </div>
+
+    <button id="nextQuestionButton">Next</button>
 
 <script src="project1.js"></script>
 </body>

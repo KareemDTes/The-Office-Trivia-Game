@@ -1,6 +1,6 @@
 body{
     text-align: center;
-    background-image: url("https://museprintables.com/files/paper/png/wide-ruled-notebook-paper-letter.png");
+    background-image: url("https://i.stack.imgur.com/8zEoh.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -9,26 +9,56 @@ body{
     margin: 0 auto;
 }
 
+#score{
+    text-align: right;
+    margin-top: 75px;
+    font-family: 'Special Elite', cursive;
+}
+
 h1{
     background-color: lightskyblue;
+    font-family: 'Special Elite', cursive;
     border-radius: 20px;
     padding: 10px;
     margin: -20px auto 45px auto;
 }
 
 #questionsBox{
-    border: red 5px solid;
-    background-color: white;
+    border: #C2885D 5px solid;
+    background-color: #FCF5E3 ;
     padding: 90px;
     border-radius: 10px;
-    margin: 100px auto;
+    margin: 100px auto -75px auto;
 }
 
-#answerButtons{
-  border: none;
-  outline: none;
-  border-radius: 20px;
-  height: 30px;
-  width: 70px;
-  display: inline;
+.optionButtons{
+    display: inline;
+    padding: 15px;
+    margin: 0 5px 15px 8px;
+    background-color: white;
+    border-radius: 30%;
+}
+
+.optionButtons:hover{
+    font-family: 'Special Elite', cursive;
+    background-color: #FFFFBF;
+    color: black;
+    border: black solid 1px;
+    cursor: pointer;
+
+}
+
+#nextQuestionButton{
+    font-family: 'Special Elite', cursive;
+    background-color: #FFFFBF;
+    text-decoration: underline;
+    border: black solid 2px;
+    border-radius: 35%;
+    padding: 7px;
+    margin-left: 85%;
+}
+
+#nextQuestionButton:hover{
+    font-size: 20px;
+    cursor: pointer;
 }

@@ -9,18 +9,43 @@ body{
 
 #startSection{
     text-align: center;
-    background-color: white;
-    border: red 5px solid;
+    background-color: #FCF5E3;
+    border: #C2885D 5px solid;
     padding: 25px;
     border-radius: 10px;
     width: 800px;
     margin: 80px 100% auto 60px;
-    background-position: center;
     background-attachment: fixed;
-    background-attachment: fixed;
-
 }
 
+h1{
+    font-family: 'Special Elite', cursive;
+}
 h3{
-    border-bottom: 2px yellow solid;
+    font-family: 'Special Elite', cursive;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    border-bottom: 2px #FFCB42 solid;
+}
+
+p{
+    font-weight: bold;
+}
+
+#introText{
+    width: 550px;
+    margin: 0 auto;
+}
+
+#beginButton{
+    background-color: #E2AA60;
+    color: white;
+    text-decoration: none;
+    border: black 2px solid;
+    border-radius: 40%;
+    padding: 6px;
+}
+
+#beginButton:hover{
+    background-color: limegreen;
 }
