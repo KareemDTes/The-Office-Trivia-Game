@@ -4,11 +4,16 @@ let nextQuestionButton = document.getElementById("nextQuestionButton");
 let updateScore = document.getElementById("score");
 
 let groupButtons = document.querySelectorAll(".optionButtons");
-
 let answerButton1 = document.querySelector("#answerButton1");
 let answerButton2 = document.querySelector("#answerButton2");
 let answerButton3 = document.querySelector("#answerButton3");
 let answerButton4 = document.querySelector("#answerButton4");
+
+const resultsBtn = document.getElementById('resultsBtn');
+const resultsModal = document.getElementById('resultsModal');
+const h2 = document.getElementById('h2');
+const secondH2 = document.getElementById('secondH2');
+
 
 const questions = [
     {
@@ -90,8 +95,7 @@ const questions = [
 
 // All the functions
 
-//function to set questions
-//global varable
+//global varables
 let q = 0;
 let currentQuestionAnswered = false
 
@@ -108,10 +112,6 @@ function setQuestion() {
   answerButton2.style.background="white"
   answerButton3.style.background="white"
   answerButton4.style.background="white"
-
-  if(q === 15){
-
-  }
 }
 
 let score = 0
@@ -130,9 +130,12 @@ function validate(e) {
 
     if(!currentQuestionAnswered) q++;
     currentQuestionAnswered = true
-//    setQuestion()
-}
 
+    if(q === 15){
+        nextQuestionButton.style.display="none";
+        resultsBtn.style.display = 'block';
+    }
+}
 
 // Create event listeners
 window.addEventListener("load", setQuestion)
@@ -141,5 +144,24 @@ nextQuestionButton.addEventListener("click", setQuestion)
 // Looping through groupButtons array, adding event listener & calling validate function for each index.
 groupButtons.forEach(button => {
     button.addEventListener("click", validate)
-
 })
+
+resultsBtn.addEventListener('click', displayResults)
+function displayResults() {
+    resultsModal.style.display = 'block';
+    h2.innerText=`Congratulations! Your final score is ${score}!`;
+    console.log(score)
+
+    if(score <= 15){
+        let scoreResult = "Did you even watch The Office?";
+    } else if (score = 20 || score <= 30){
+        scoreResult = "We think you need to watch the series another 4 times"
+    } else if (score = 35 || score <= 45){
+        scoreResult = "You're on your way to being a true Office fan!"
+    } else if (score = 50 || score <= 60){
+        scoreResult = "We can tell you've watched the series 5-10 times"
+    } else {
+        scoreResult = "You're an Office champion!!"
+    }
+    secondH2.innerText = `${scoreResult}`
+}
