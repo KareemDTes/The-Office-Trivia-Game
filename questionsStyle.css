@@ -148,6 +148,9 @@ a {
     margin-bottom: -90px;
   }
   #resultsModal {
-    /* width: 300px; */
+    width: 250px;
+  }
+  #nextQuestionButton:hover {
+    font-size: 15px;
   }
 }

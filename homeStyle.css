@@ -1,51 +1,66 @@
-body{
+body {
+  background: url("https://wallpapercave.com/wp/wp4013881.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+#startSection {
+  text-align: center;
+  background-color: #fcf5e3;
+  border: #c2885d 5px solid;
+  padding: 25px;
+  border-radius: 10px;
+  width: 55%;
+  margin: 80px 100% auto 60px;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: "Special Elite", cursive;
+}
+h3 {
+  font-family: "Special Elite", cursive;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  border-bottom: 2px #ffcb42 solid;
+}
+
+p {
+  font-weight: bold;
+}
+
+#introText {
+  width: inherit;
+  margin: 0 auto;
+}
+
+#beginButton {
+  background-color: #e2aa60;
+  color: white;
+  text-decoration: none;
+  border: black 2px solid;
+  border-radius: 40%;
+  padding: 6px;
+}
+
+#beginButton:hover {
+  background-color: limegreen;
+}
+
+@media screen and (max-width: 600px) {
+  #startSection {
+    width: 300px;
+    padding: -30px;
+  }
+  body {
     background: url("https://wallpapercave.com/wp/wp4013881.jpg");
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position: right;
     z-index: -1;
-}
-
-#startSection{
-    text-align: center;
-    background-color: #FCF5E3;
-    border: #C2885D 5px solid;
-    padding: 25px;
-    border-radius: 10px;
-    width: 55%;
-    margin: 80px 100% auto 60px;
-    background-attachment: fixed;
-}
-
-h1{
-    font-family: 'Special Elite', cursive;
-}
-h3{
-    font-family: 'Special Elite', cursive;
-    margin-top: -10px;
-    margin-bottom: 20px;
-    border-bottom: 2px #FFCB42 solid;
-}
-
-p{
-    font-weight: bold;
-}
-
-#introText{
-    width: inherit;
-    margin: 0 auto;
-}
-
-#beginButton{
-    background-color: #E2AA60;
-    color: white;
-    text-decoration: none;
-    border: black 2px solid;
-    border-radius: 40%;
-    padding: 6px;
-}
-
-#beginButton:hover{
-    background-color: limegreen;
+  }
 }
