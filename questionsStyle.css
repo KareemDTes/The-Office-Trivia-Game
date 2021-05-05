@@ -1,122 +1,153 @@
-body{
-    text-align: center;
-    background-image: url("https://i.stack.imgur.com/8zEoh.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    z-index: -1;
-    width: 900px;
-    margin: 0 auto;
+body {
+  text-align: center;
+  background-image: url("https://i.stack.imgur.com/8zEoh.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: -1;
+  width: 900px;
+  margin: 0 auto;
 }
 
-#score{
-    text-align: right;
-    margin-top: 75px;
-    font-family: 'Special Elite', cursive;
-    font-size: 25px;;
+#score {
+  text-align: right;
+  margin-top: 75px;
+  font-family: "Special Elite", cursive;
+  font-size: 25px;
 }
 
-h1{
-    background-color: lightskyblue;
-    font-family: 'Special Elite', cursive;
-    border-radius: 20px;
-    padding: 10px;
-    margin: -20px auto 45px auto;
+#questionContainer {
+  background-color: lightskyblue;
+  font-family: "Special Elite", cursive;
+  border-radius: 20px;
+  padding: 10px;
+  margin: -20px auto 45px auto;
 }
 
-#questionsBox{
-    border: #C2885D 5px solid;
-    background-color: #FCF5E3 ;
-    padding: 90px;
-    border-radius: 10px;
-    margin: 100px auto -75px auto;
+#questionsBox {
+  border: #c2885d 5px solid;
+  background-color: #fcf5e3;
+  padding: 90px;
+  border-radius: 10px;
+  margin: 100px auto -75px auto;
 }
 
-.optionButtons{
-    display: inline;
-    padding: 15px;
-    margin: 0 5px 15px 8px;
-    background-color: white;
-    border-radius: 30%;
+.optionButtons {
+  display: inline;
+  padding: 15px;
+  margin: 0 5px 15px 8px;
+  background-color: white;
+  border-radius: 30%;
 }
 
-.optionButtons:hover{
-    font-family: 'Special Elite', cursive;
-    background-color: #FFFFBF;
-    color: black;
-    border: black solid 1px;
-    cursor: pointer;
-
+.optionButtons:hover {
+  font-family: "Special Elite", cursive;
+  background-color: #ffffbf;
+  color: black;
+  border: black solid 1px;
+  cursor: pointer;
 }
 
-#nextQuestionButton{
-    font-family: 'Special Elite', cursive;
-    background-color: #FFFFBF;
-    text-decoration: underline;
-    border: black solid 2px;
-    border-radius: 35%;
-    padding: 7px;
-    margin-left: 85%;
+#nextQuestionButton {
+  font-family: "Special Elite", cursive;
+  background-color: #ffffbf;
+  text-decoration: underline;
+  border: black solid 2px;
+  border-radius: 35%;
+  padding: 7px;
+  margin-left: 85%;
 }
 
-#nextQuestionButton:hover{
-    font-size: 20px;
-    cursor: pointer;
+#nextQuestionButton:hover {
+  font-size: 20px;
+  cursor: pointer;
 }
 
-#resultsModal{
-    display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 1;
-	overflow: auto;
+#resultsModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
 }
 
-#resultsBtn{
-    display: none;
-    font-family: 'Special Elite', cursive;
-    background-color: #FFFFBF;
-    text-decoration: underline;
-    border: black solid 2px;
-    border-radius: 35%;
-    padding: 7px;
-    margin-left: 85%;
+#resultsBtn {
+  display: none;
+  font-family: "Special Elite", cursive;
+  background-color: #ffffbf;
+  text-decoration: underline;
+  border: black solid 2px;
+  border-radius: 35%;
+  padding: 7px;
+  margin-left: 85%;
 }
 
-#resultsBtn:hover{
-    font-size: 20px;
-    cursor: pointer;
+#resultsBtn:hover {
+  font-size: 20px;
+  cursor: pointer;
 }
 
-#modalText{
-    background-color: #FCF5E3;
-    border: black 5px solid;
-	height: 250px;
-	width: 500px;
-	border-radius: 2px;
-    margin: 150px auto;
+#modalText {
+  background-color: #fcf5e3;
+  border: black 5px solid;
+  height: 250px;
+  width: 500px;
+  border-radius: 2px;
+  margin: 150px auto;
 }
 
-h2{
-    padding: 45px;
-    color: #F2B750;
-    font-family: 'Special Elite', cursive;
-    margin-top: -20px;
+h2 {
+  padding: 45px;
+  color: #f2b750;
+  font-family: "Special Elite", cursive;
+  margin-top: -20px;
 }
 
-#secondH2{
-    margin-top: -85px;
-    margin-bottom: -5px;
+#secondH2 {
+  margin-top: -85px;
+  margin-bottom: -5px;
 }
 
-a{
-    border: 2px black solid;
-    border-radius: 40%;
-    padding: 8px;
-    text-decoration: none;
-    background-color: #FFFFBF;
-    color: black;
+a {
+  border: 2px black solid;
+  border-radius: 40%;
+  padding: 8px;
+  text-decoration: none;
+  background-color: #ffffbf;
+  color: black;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    width: 350px;
+  }
+  #nextQuestionButton {
+    margin: 15px auto;
+    margin-bottom: -50px;
+  }
+  #resultsBtn {
+    margin: 20px auto;
+    margin-bottom: -30px;
+  }
+  #questionContainer {
+    width: 200px;
+    margin-top: -55px;
+    margin-left: -45px;
+    margin-bottom: 25px;
+    padding: 25px;
+    font-size: 25px;
+  }
+  #questionsBox {
+    margin-bottom: 15px;
+    padding-bottom: 50px;
+  }
+  #score {
+    margin-bottom: -90px;
+  }
+  #resultsModal {
+    /* width: 300px; */
+  }
 }
